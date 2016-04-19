@@ -1,0 +1,160 @@
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{amsmath}  	% this permits text in eqnarray among other benefits
+\usepackage{color}          	% gives color options
+\usepackage{url}		% produces hyperlinks
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}	% allows for color usage in tables
+\usepackage{multirow}	% allows for rows that span multiple rows in tables
+\usepackage{xcolor}		% this package has a variety of color options
+\usepackage{calc}
+\usepackage{multicol}
+%\usepackage{minted}
+\usepackage{wrapfig}
+\usepackage{textcomp}
+
+
+\usetheme{metropolis} 
+
+
+%%%%%%%%%%%%%%%%
+% Custom Colors
+%%%%%%%%%%%%%%%%
+
+\xdefinecolor{oiBlue}{rgb}{0.15, 0.35, 0.55}
+\xdefinecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\xdefinecolor{darkGray}{rgb}{0.3, 0.3, 0.3}
+\xdefinecolor{darkerGray}{rgb}{0.2, 0.2, 0.2}
+\xdefinecolor{rubineRed}{rgb}{0.89,0,0.30}
+\xdefinecolor{linkCol}{rgb}{0.11,0.49,0.95}	
+\xdefinecolor{irishGreen}{rgb}{0,0.60,0}	
+\xdefinecolor{darkturquoise}{rgb}{0.44, 0.58, 0.86}
+\definecolor{lightGreen}{rgb}{0.533,0.765,0.42}
+%\xdefinecolor{hlblue}{rgb}{0.051,0.65,1}
+\xdefinecolor{hlblue}{rgb}{ 0.055, 0.639, 0.831}
+\definecolor{light}{rgb}{.337,.608,.741}
+\definecolor{dark}{rgb}{.337,.608,.741}
+
+%%%%%%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%%%%%%
+
+
+% not implies
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+% degree
+\newcommand{\degree}{\ensuremath{^\circ}}
+
+% cite
+\newcommand{\ct}[1]{
+\vfill
+{\tiny #1}}
+
+% Note
+\newcommand{\Note}[1]{
+\rule{2.5cm}{0.25pt} \\ \textit{\footnotesize{\textcolor{rubineRed}{Note:} \textcolor{darkerGray}{#1}}}}
+
+% Remember
+\newcommand{\Remember}[1]{\textit{\scriptsize{\textcolor{orange}{Remember:} #1}}}
+
+% text colors
+\newcommand{\red}[1]{\textit{\textcolor{rubineRed}{#1}}}
+\newcommand{\orange}[1]{\textit{\textcolor{orange}{#1}}}
+\newcommand{\pink}[1]{\textit{\textcolor{rubineRed!90!white!50}{#1}}}
+\newcommand{\green}[1]{\textit{\textcolor{irishGreen}{#1}}}
+\newcommand{\blue}[1]{\textit{\textcolor{darkturquoise}{#1}}}
+\newcommand{\light}[1]{\textcolor{light}{\textbf{#1}}}
+\newcommand{\dark}[1]{\textcolor{dark}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+
+
+% links: webURL, webLin, appLink
+\newcommand{\webURL}[1]{\urlstyle{same}{\textit{\textcolor{linkCol}{\url{#1}}} }}
+\newcommand{\webLink}[2]{\href{#1}{\textcolor{linkCol}{{#2}}}}
+\newcommand{\appLink}[2]{\href{#1}{\textcolor{lightGreen!80!black!90}{{#2}}}}
+
+% mail
+\newcommand{\mail}[1]{\href{mailto:#1}{\textit{\textcolor{linkCol}{#1}}}}
+
+% highlighting: hl, hlGr, mathhl
+\newcommand{\hl}[1]{\textit{\textcolor{hlblue}{#1}}}
+\newcommand{\hlGr}[1]{\textit{\textcolor{lightGreen}{#1}}}
+\newcommand{\hlRd}[1]{\textit{\textcolor{rubineRed}{#1}}}
+\newcommand{\mathhl}[1]{\textcolor{hlblue}{\ensuremath{#1}}}
+
+% example
+\newcommand{\ex}[1]{\textcolor{blue}{{{\small (#1)}}}}
+
+% two col: two columns
+\newenvironment{twocol}[4]{
+\begin{columns}[T]
+\column{#1\textwidth}
+#3
+\column{#2\textwidth}
+#4
+\end{columns}
+}
+
+\newenvironment{twocolt}[4]{
+\begin{columns}[T]
+\column{#1\textwidth}
+#3
+\column{#2\textwidth}
+#4
+\end{columns}
+}
+
+
+\newenvironment{threecol}[6]{
+\begin{columns}[t]
+\column{#1\textwidth}
+#4
+\column{#2\textwidth}
+#5
+\column{#3\textwidth}
+#6
+\end{columns}
+}
+
+% slot (for probability calculations)
+\newenvironment{slot}[2]{
+\begin{array}{c} 
+\underline{#1} \\ 
+#2
+\end{array}
+}
+
+% paren: left and right parentheses
+\newcommand{\paren}[1]{
+\left( #1 \right)
+}
+
+% solnMult: solutions for multiple choice 
+%\newcommand{\solnMult}[1]{
+%\item[] \vspace{-0.59cm}
+%\only<1>{\item #1}
+%\soln{\only<2->{\item \red{#1}}}
+%}
+
+% changemargin
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item}{\end{list}}
+
+% openintro styles
+
+\newenvironment{data}[1]{\texttt{#1}}{}
+\newenvironment{var}[1]{\texttt{#1}}{}
+\newenvironment{resp}[1]{\texttt{#1}}{}

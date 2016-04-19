@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Teaching online}{2}{0}{1}
+\beamer@sectionintoc {2}{Fully online courses}{3}{0}{2}
+\beamer@sectionintoc {3}{Teaching with online resources}{15}{0}{3}
+\beamer@sectionintoc {4}{Assessment}{17}{0}{4}
+\beamer@sectionintoc {5}{Course evaluations}{20}{0}{5}

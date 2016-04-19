@@ -1,0 +1,28 @@
+markdown: kramdown
+exclude:
+  - LICENSE
+
+layouts: ./_noita
+baseurl: /courses/Spring16/sta771.01
+
+noita:
+  name: Sta 771S - Teaching Statistics
+  description: Jekyll theme built with Foundation
+  author:
+    name: Mine Cetinkaya-Rundel
+    url: http://stat.duke.edu/~mc301/
+  lang: en
+  topbar:
+    toggle: Menu
+    right:
+      - name: Schedule
+        url: /
+      - name: Syllabus
+        url: /syllabus/
+      - name: Papers
+        url: /papers/
+      - name: Resources
+        url: /resources/ 
+      - name: Sakai
+        url: https://sakai.duke.edu/portal/site/add6c651-7d43-4a41-8e98-9926f18da00b
+        absolute: true

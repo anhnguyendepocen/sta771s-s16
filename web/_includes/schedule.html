@@ -1,0 +1,20 @@
+<table style="font-size:90%" width="1000px">
+<thead>
+<tr>
+    <th width="10%" align="left">Date</th>
+    <th width="40%" align="left">Topic</th>
+    <th width="50%" align="left">Due</th>    
+</tr>
+</thead> 
+
+{% for row in site.data.schedule.content_hash %}
+<tr>
+    <td>{{row.Date}}</td>
+    <td>{{row.Topic}}</td>
+    <td>{{row.Due}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>

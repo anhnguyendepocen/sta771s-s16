@@ -1,0 +1,20 @@
+\frametitle{Structure: Hide the answers}
+
+If using LaTeX / Beamer, this is easy:
+
+\begin{itemize}
+
+\item For slides you show in class:
+
+\begin{verbatim}
+\newcommand{\soln}[1]{\textit{#1}}
+\end{verbatim}
+
+\item For slides posted for students:
+
+\begin{verbatim}
+\newcommand{\soln}[1]{}
+\end{verbatim}
+
+\end{itemize}
+
